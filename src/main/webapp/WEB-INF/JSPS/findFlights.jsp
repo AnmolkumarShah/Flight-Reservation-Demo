@@ -10,5 +10,15 @@
 
 <h1>Find Flights</h1>
 
+<form action="findFlights" method="post" >
+
+from : <input type="text" name="from">
+to : <input type="text" name="to">
+Departure Date : <input type="text" name="departueDate">
+
+<input type="submit" value="Search" >
+
+</form>
+
 </body>
 </html>

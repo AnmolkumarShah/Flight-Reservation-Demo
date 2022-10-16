@@ -34,7 +34,7 @@ public class UserController {
 			@RequestParam("password") String password, Model m) {
 		User u = theSerUserService.findByEmail(email);
 		if(u.getPassword().equals(password)) {			
-			return "/findFlights";
+			return "findFlights";
 		}else {
 			m.addAttribute("msg", "invalid email or password");
 			return "login/login";
