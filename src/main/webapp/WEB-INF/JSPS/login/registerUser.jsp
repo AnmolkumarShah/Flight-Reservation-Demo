@@ -7,39 +7,47 @@
 <meta charset="ISO-8859-1">
 <title>Register User</title>
 </head>
+<style>
+	td{
+		width: 50px;
+	};
+</style>
 <body>
 
-	<form:form action="registerUser" method="POST" >
+	<h1>User Registration</h1>
+
+	<form:form action="register" modelAttribute="newUser" method="POST">
 
 		<table>
 
 			<tr>
-				First Name :
-				<td><form:input path="firstName" name="firstName" /></td>
+
+				<td>First Name : <form:input path="firstName" /></td>
 			</tr>
 
 			<tr>
-				Last Name :
-				<td><form:input path="lastName" name="lastName" /></td>
+
+				<td>Last Name : <form:input path="lastName" /></td>
 			</tr>
 
 			<tr>
-				Email :
-				<td><form:input path="email" name="email" /></td>
+
+				<td>Email : <form:input path="email" /></td>
 			</tr>
 
 			<tr>
-				Password :
-				<td><form:input path="password" name="password" /></td>
+
+				<td>Password : <form:input type="password" path="password" /></td>
 			</tr>
-			
+
 			<tr>
-				Confirm Password :
-				<td><form:input path="password" name="confirm_password" /></td>
+
+				<td>Confirm Password : <form:input type="password" path="password"
+						name="confirm_password" /></td>
 			</tr>
-			
+
 			<tr>
-				<td><form:input type="submit" value="Register" /></td>
+				<td><input type="submit" value="Register" /></td>
 			</tr>
 		</table>
 
