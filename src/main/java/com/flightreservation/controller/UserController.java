@@ -22,6 +22,11 @@ public class UserController {
 		m.addAttribute("newUser", new User());
 		return "login/registerUser";
 	}
+	
+	@RequestMapping("/loguser")
+	public String loginUser() {
+		return "login/login";
+	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String register(@ModelAttribute("newUser") User theUser) {
@@ -33,7 +38,7 @@ public class UserController {
 	public String login(@RequestParam("email") String email, 
 			@RequestParam("password") String password, Model m) {
 		User u = theSerUserService.findByEmail(email);
-		if(u.getPassword().equals(password)) {			
+		if(u != null && u.getPassword().equals(password)) {			
 			return "findFlights";
 		}else {
 			m.addAttribute("msg", "invalid email or password");

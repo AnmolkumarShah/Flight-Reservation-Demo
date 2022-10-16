@@ -23,6 +23,8 @@ last name : <input type="text" name="lastName" /><br>
 email : <input type="text" name="email" /><br>
 phone : <input type="text" name="phone" /><br>
 
+<input type="hidden" name="flightId" value="${flight.getId() }" >
+
 <h3>Card Details</h3>
 
 Name on card : <input type="text" name="nameOnTheCard" /><br>
